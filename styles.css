@@ -1,0 +1,101 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    color: white;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.stopwatch {
+    text-align: center;
+}
+
+.display {
+    font-size: 3em;
+    margin-bottom: 20px;
+    letter-spacing: 5px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0.5; }
+}
+
+.buttons button {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#startStop {
+    background-color: #28a745;
+    color: white;
+}
+
+#startStop:active {
+    transform: scale(0.95);
+    background-color: #218838;
+}
+
+#reset {
+    background-color: #dc3545;
+    color: white;
+}
+
+#reset:active {
+    transform: scale(0.95);
+    background-color: #c82333;
+}
+
+#lap {
+    background-color: #ffc107;
+    color: black;
+}
+
+#lap:active {
+    transform: scale(0.95);
+    background-color: #e0a800;
+}
+
+.laps {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.laps li {
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 5px 0;
+    border-radius: 5px;
+    animation: fadeInLap 0.5s ease-in-out;
+}
+
+@keyframes fadeInLap {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
